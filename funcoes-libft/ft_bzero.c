@@ -15,11 +15,16 @@ void    *ft_memset(void *str, int c, size_t n)
        }
        return (s);
 }
+
+void	ft_bzero(void *s, size_t n)
+{
+	ft_memset(s,'\0', n);
+}
+
 int	main()
 {
-	char x[50];
-        char	s = '%';
-	printf("%s\n", ft_memset(x, '$', 7));
-	printf("%s\n", memset(x, '$', 7));
+	void x;
+	printf("%d\n", ft_bzero(x, 5));
+	printf("%d\n", bzero(x, 5));
 	return (0);
 }

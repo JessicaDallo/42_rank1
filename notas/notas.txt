@@ -1,0 +1,6 @@
+put char 
+	write (parametro, variavel, 1);
+
+
+bzero
+	rever 
