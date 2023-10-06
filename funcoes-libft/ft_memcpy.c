@@ -1,30 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jessicadallo <jessicadallo@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/06 17:23:21 by jessicadall       #+#    #+#             */
-/*   Updated: 2023/10/06 17:23:21 by jessicadall      ###   ########.fr       */
+/*   Created: 2023/10/06 17:23:36 by jessicadall       #+#    #+#             */
+/*   Updated: 2023/10/06 17:23:36 by jessicadall      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(int c)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	if (c >= 0 && c <= 127)
+	size_t i;
+	//unsigned char	*d;
+	//unsigned char	*s;
+
+	i = 0;
+	if(!dest || !src)
 	{
-		return (1);
+		return (0);
 	}
-	return (0);
+	while (i < n)
+	{
+		((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
+		i++;
+	}
+	return (dest);
 }
 
 // int	main()
 // {
-// 	int x = '1';
-// 	printf("%d\n", ft_isascii(x));
-// 	printf("%d\n", isascii(x));
+// 	char x[] = "jessica";
+// 	printf("%d\n", ft_memcpy(x, "oculos", 5));
+// 	printf("%d\n", memcpy(x, "oculos", 5));
 // 	return (0);
 // }

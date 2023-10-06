@@ -1,5 +1,16 @@
-#include <stdio.h>
-#include <ctype.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jessicadallo <jessicadallo@student.42.f    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/06 17:23:14 by jessicadall       #+#    #+#             */
+/*   Updated: 2023/10/06 17:23:14 by jessicadall      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isalpha(int c)
 {
@@ -11,10 +22,10 @@ int	ft_isalpha(int c)
 	
 	return (0);
 }
-int	main()
-{
-	int x = '1';
-	printf("%d\n", ft_isalpha(x));
-	printf("%d\n", isalpha(x));
-	return (0);
-}
+// int	main()
+// {
+// 	int x = '1';
+// 	printf("%d\n", ft_isalpha(x));
+// 	printf("%d\n", isalpha(x));
+// 	return (0);
+// }

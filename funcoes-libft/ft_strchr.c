@@ -1,31 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jessicadallo <jessicadallo@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/06 17:23:26 by jessicadall       #+#    #+#             */
-/*   Updated: 2023/10/06 17:23:26 by jessicadall      ###   ########.fr       */
+/*   Created: 2023/10/06 17:23:49 by jessicadall       #+#    #+#             */
+/*   Updated: 2023/10/06 17:23:49 by jessicadall      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(int c)
+char	*ft_strchr(const char *str, int c)
 {
+	int	i;
+	char	*s;
+	char	ch;
 
-	if (c >= 48 && c <= 57)
+	i = 0;
+	s = (char *)str;
+	ch = c;
+	if (ch == '\0')
 	{
-		return (1);
+		return (NULL);
 	}
-	return (0);
+	while (s[i] != '\0')
+	{
+		while (s[i] == c)
+		{
+			return ((char *)s + i);
+		}
+		i++;
+	}
+	return (NULL);
 }
 
-/*int	main()
-{
-	int x = 'a';
-	printf("%d\n", ft_isdigit(x));
-	printf("%d\n", isdigit(x));
-	return (0);
-}*/
+// int main () {
+// 	const char str[] = "jessica gosta de arroz";
+// 	const char ch = 's';
+// 	printf ("%s\n", strchr(str, ch));
+// 	printf ("%s\n", strchr(str, ch));
+// 	return 0;
+// }

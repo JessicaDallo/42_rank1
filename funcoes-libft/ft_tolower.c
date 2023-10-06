@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jessicadallo <jessicadallo@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/06 17:23:21 by jessicadall       #+#    #+#             */
-/*   Updated: 2023/10/06 17:23:21 by jessicadall      ###   ########.fr       */
+/*   Created: 2023/10/06 17:24:01 by jessicadall       #+#    #+#             */
+/*   Updated: 2023/10/06 17:24:01 by jessicadall      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(int c)
+int     ft_tolower(int c)
 {
-	if (c >= 0 && c <= 127)
-	{
-		return (1);
-	}
-	return (0);
+        if(c >= 'A' && c <= 'Z')
+        {
+                c = c + 32;
+        }
+        return (c);
 }
 
 // int	main()
 // {
-// 	int x = '1';
-// 	printf("%d\n", ft_isascii(x));
-// 	printf("%d\n", isascii(x));
+// 	char x = 'S';
+// 	printf("%c\n", ft_tolower(x));
+// 	printf("%c\n", tolower(x));
 // 	return (0);
 // }

@@ -1,5 +1,16 @@
-#include <stdio.h>
-#include <string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jessicadallo <jessicadallo@student.42.f    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/06 17:23:45 by jessicadall       #+#    #+#             */
+/*   Updated: 2023/10/06 17:23:45 by jessicadall      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 void    *ft_memset(void *str, int c, size_t n)
 {
@@ -15,11 +26,11 @@ void    *ft_memset(void *str, int c, size_t n)
        }
        return (s);
 }
-int	main()
+/*int	main()
 {
 	char x[50];
-        char	s = '%';
-	printf("%s\n", ft_memset(x, '$', 7));
-	printf("%s\n", memset(x, '$', 7));
+        int	s = '%';
+	printf("%s\n", (char *)ft_memset(x, s, 7));
+	printf("%s\n", (char *)ft_memset(x, s, 7));
 	return (0);
-}
+}*/

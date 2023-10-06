@@ -1,5 +1,16 @@
-#include <stdlib.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jessicadallo <jessicadallo@student.42.f    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/06 17:23:01 by jessicadall       #+#    #+#             */
+/*   Updated: 2023/10/06 17:23:01 by jessicadall      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {
@@ -30,10 +41,11 @@ int	ft_atoi(const char *str)
 	}
 	return (result * sinal);
 
-}int	main()
+}
+/*int	main()
 {
 	char x[] = " 	-1234";
 	printf("%d\n", ft_atoi(x));
 	printf("%d\n", atoi(x));
 	return (0);
-}
+}*/

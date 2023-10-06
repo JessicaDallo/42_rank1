@@ -1,30 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jessicadallo <jessicadallo@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/06 17:23:21 by jessicadall       #+#    #+#             */
-/*   Updated: 2023/10/06 17:23:21 by jessicadall      ###   ########.fr       */
+/*   Created: 2023/10/06 17:23:40 by jessicadall       #+#    #+#             */
+/*   Updated: 2023/10/06 17:23:40 by jessicadall      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(int c)
-{
-	if (c >= 0 && c <= 127)
-	{
-		return (1);
-	}
-	return (0);
-}
 
+void    *ft_memmove(void *str1, const void *str2, size_t n)
+{
+        size_t    i;
+
+        i = 0;
+        while(i < n)
+        {
+                ((unsigned char *)str1)[i] = ((const char*)str2)[i];
+                i++;
+        }
+        return (str1);
+}
 // int	main()
 // {
-// 	int x = '1';
-// 	printf("%d\n", ft_isascii(x));
-// 	printf("%d\n", isascii(x));
+// 	char x[] = "jessica";
+//         char y[] = "arnaldojessica";
+// 	printf("%s\n", (char *)ft_memmove(y, x, 7));
+// 	printf("%s\n", (char *)memmove(y, x, 7));
 // 	return (0);
 // }

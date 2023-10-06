@@ -1,3 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jessicadallo <jessicadallo@student.42.f    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/06 17:23:11 by jessicadall       #+#    #+#             */
+/*   Updated: 2023/10/06 17:23:11 by jessicadall      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isalnum(char c)
 {
@@ -9,10 +22,10 @@ int	ft_isalnum(char c)
         }
 	return (0);
 }
-int	main()
+/*int	main()
 {
 	int x = 'a';
 	printf("%d\n", ft_isdigit(x));
 	printf("%d\n", isdigit(x));
 	return (0);
-}
+}*/

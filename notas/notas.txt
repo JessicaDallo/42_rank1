@@ -4,3 +4,13 @@ put char
 
 bzero
 	rever 
+
+
+#### apagar as bibliotecas do header libft.h
+
+GitHub theme
+
+ctrl shift p reload
+
+
+saber o que é o size t

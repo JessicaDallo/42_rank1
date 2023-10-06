@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jessicadallo <jessicadallo@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/06 17:23:21 by jessicadall       #+#    #+#             */
-/*   Updated: 2023/10/06 17:23:21 by jessicadall      ###   ########.fr       */
+/*   Created: 2023/10/06 17:23:33 by jessicadall       #+#    #+#             */
+/*   Updated: 2023/10/06 17:23:33 by jessicadall      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+ #include "libft.h"
 
-int	ft_isascii(int c)
+//void *memchr (const void *str, int c, size_t n)
+
+
+int main ()
 {
-	if (c >= 0 && c <= 127)
-	{
-		return (1);
-	}
-	return (0);
-}
+ 	const char str[] = "jessica gosta de arroz";
+ 	const char ch = 'a';
 
-// int	main()
-// {
-// 	int x = '1';
-// 	printf("%d\n", ft_isascii(x));
-// 	printf("%d\n", isascii(x));
-// 	return (0);
-// }
+ 	printf ("%s\n", memchr(str, ch, 7));
+ 	return 0;
+}
