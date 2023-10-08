@@ -2,23 +2,11 @@
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: jessicadallo <jessicadallo@student.42.f    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/06 17:23:54 by jessicadall       #+#    #+#             */
-/*   Updated: 2023/10/06 17:23:54 by jessicadall      ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+        
+/*                                                    +:+ +:+
 	+:+     */
-/*   By: jessicadallo <jessicadallo@student.42.f    +#+  +:+      
+/*   By: jessicadallo <jessicadallo@student.42.f    +#+  +:+
 	+#+        */
-/*                                                +#+#+#+#+#+  
+/*                                                +#+#+#+#+#+
 	+#+           */
 /*   Created: 2023/10/06 16:39:33 by jessicadall       #+#    #+#             */
 /*   Updated: 2023/10/06 16:39:33 by jessicadall      ###   ########.fr       */
@@ -27,10 +15,9 @@
 
 #include "libft.h"
 
-
-int	ft_strlen(char *s)
+int	ft_strlen(const char *s)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (s[i] != '\0')

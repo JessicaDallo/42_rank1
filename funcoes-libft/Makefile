@@ -23,8 +23,10 @@ OBJ	= ft_isalpha.o \
 	ft_strncmp.o \
 	ft_memcpy.o \
 	ft_memmove.o \
-	ft_atoi.o
-
+	ft_atoi.o \
+	ft_strnstr.o \
+	ft_strrchr.o 
+	
 all: $(NAME) 
 
 $(NAME): $(OBJ)

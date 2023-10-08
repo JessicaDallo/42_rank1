@@ -2,9 +2,12 @@
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: jessicadallo <jessicadallo@student.42.f    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
+/*                                                    +:+ +:+        
+	+:+     */
+/*   By: jessicadallo <jessicadallo@student.42.f    +#+  +:+      
+	+#+        */
+/*                                                +#+#+#+#+#+  
+	+#+           */
 /*   Created: 2023/10/06 17:23:21 by jessicadall       #+#    #+#             */
 /*   Updated: 2023/10/06 17:23:21 by jessicadall      ###   ########.fr       */
 /*                                                                            */
@@ -21,7 +24,7 @@ int	ft_isascii(int c)
 	return (0);
 }
 
-// int	main()
+// int	main(void)
 // {
 // 	int x = '1';
 // 	printf("%d\n", ft_isascii(x));
