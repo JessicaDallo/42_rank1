@@ -1,39 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jessicadallo <jessicadallo@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/07 22:54:46 by jessicadall       #+#    #+#             */
-/*   Updated: 2023/10/08 16:21:26 by jessicadall      ###   ########.fr       */
+/*   Created: 2023/10/08 20:24:13 by jessicadall       #+#    #+#             */
+/*   Updated: 2023/10/08 20:47:49 by jessicadall      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <bsd/string.h>
 #include <stdio.h>
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+char	*ft_strdup(const char *s)
 {
+	char	*str;
 	size_t	i;
 
-	i = ft_strlen(little);
-	if (*little == 0)
-		return ((char *)big);
-	while (*big && i <= len)
+	i = 0;
+	str = (char *)malloc(ft_strlen(s) * sizeof(char) + 1);
+	if (str == NULL)
+		return (NULL);
+	while (s[i] != '\0')
 	{
-		if (*big == *little && ft_strncmp(big, little, i) == 0)
-			return ((char *)big);
-		big++;
-		len--;
+		str[i] = s[i];
+		i++;
 	}
-	return (NULL);
+	str[i] = 0;
+	return (str);
 }
-// int	main (void)
+// int main (void)
 // {
-// 	char x[] = "aaxx";
-// 	char y[] = "xx";
-// 	printf("%s\n", (char *)ft_strnstr(x, y, 4));
-// 	return (0);
+// 	char *result;
+// 	char word[] = "jessica";
+// 	result = ft_strdup(word);
+// 	printf("%s", result);
 // }

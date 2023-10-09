@@ -1,39 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jessicadallo <jessicadallo@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/07 22:54:46 by jessicadall       #+#    #+#             */
-/*   Updated: 2023/10/08 16:21:26 by jessicadall      ###   ########.fr       */
+/*   Created: 2023/10/08 17:08:33 by jessicadall       #+#    #+#             */
+/*   Updated: 2023/10/08 18:46:46 by jessicadall      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <bsd/string.h>
 #include <stdio.h>
+#include <string.h>
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+int	ft_memcmp(const void *dest, const void *src, size_t n)
 {
-	size_t	i;
+	unsigned char	*d;
+	unsigned char	*s;
 
-	i = ft_strlen(little);
-	if (*little == 0)
-		return ((char *)big);
-	while (*big && i <= len)
+	d = (unsigned char *)dest;
+	s = (unsigned char *)src;
+	while (n > 0)
 	{
-		if (*big == *little && ft_strncmp(big, little, i) == 0)
-			return ((char *)big);
-		big++;
-		len--;
+		if (*d != *s)
+			return (*d - *s);
+		d++;
+		s++;
+		n--;
 	}
-	return (NULL);
+	return (0);
 }
-// int	main (void)
+// int	main(void)
 // {
-// 	char x[] = "aaxx";
-// 	char y[] = "xx";
-// 	printf("%s\n", (char *)ft_strnstr(x, y, 4));
+// 	char x[] = "jeesica";
+// 	char y[] = "jessica";
+// 	printf("%d\n", ft_memcmp(x, y, 3));
+// 	printf("%d\n", memcmp(x, y, 3));
 // 	return (0);
 // }

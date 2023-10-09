@@ -7,25 +7,29 @@ ARFLAGS	= rcs
 RM	= rm
 RMFLAGS	= -f
 
-OBJ	= ft_isalpha.o \
+OBJ	= ft_atoi.o \
+	ft_bzero.o \
+	ft_isalpha.o \
 	ft_isdigit.o \
 	ft_isalnum.o \
 	ft_isascii.o \
 	ft_isprint.o \
-	ft_strlen.o \
-	ft_memset.o \
-	ft_bzero.o \
+	ft_memcpy.o \
 	ft_memmove.o \
-	ft_toupper.o \
-	ft_tolower.o \
+	ft_memset.o \
+	ft_memcmp.o \
 	ft_strchr.o \
 	ft_strlen.o \
 	ft_strncmp.o \
-	ft_memcpy.o \
-	ft_memmove.o \
-	ft_atoi.o \
+	ft_strlcat.o \
 	ft_strnstr.o \
-	ft_strrchr.o 
+	ft_strrchr.o \
+	ft_strlcpy.o \
+	ft_strdup.o \
+	ft_toupper.o \
+	ft_tolower.o 
+
+	
 	
 all: $(NAME) 
 

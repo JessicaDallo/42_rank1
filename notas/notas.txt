@@ -4,6 +4,7 @@ put char
 ===================================================================
 memmove, memcpy >> POR QUE NÃO COMPILA INDIVIDUALMENTE???
 strchr / strrchr >> POR QUE DA ERO NO FSOARES???
+strnstr >> como funciona??
 
 strchr >> saber o por que while (*s) e não s[i] != '\0'
 saber o que é o size t e por que 

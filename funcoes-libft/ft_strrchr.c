@@ -6,7 +6,7 @@
 /*   By: jessicadallo <jessicadallo@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 19:32:39 by jessicadall       #+#    #+#             */
-/*   Updated: 2023/10/07 19:51:24 by jessicadall      ###   ########.fr       */
+/*   Updated: 2023/10/08 21:36:24 by jessicadall      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strrchr(const char *str, int c)
 {
 	char	*res;
 
-	res = NULL;
+	res = 0;
 	while (*str)
 	{
 		if (*str == (unsigned char)c)
