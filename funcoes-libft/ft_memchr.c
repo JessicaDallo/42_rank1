@@ -23,26 +23,26 @@ void	*ft_memchr(const void *str, int c, size_t n)
 
 	i = 0;
 	s = (unsigned char *)str;
-	if (c == '\0')
+	c = (char *)c;
+	while (*s != c && n)
 	{
+		s++;
+		n--;
+	}
+	if(n)
+		return ((void *)s);
+	else
 		return (NULL);
-	}
-	while (s[i] != '\0' || i < n)
-	{
-		if (s[i] == c)
-		{
-			return (s + i);
-		}
-		i++;
-	}
+
 	return (s);
 }
-/*int	main(void)
-{
-	const char str[] = "jessica gosta de arroz";
-	const char ch = 'i';
+// int	main(void)
+// {
+// 	const char str[] = "jessica gosta de arroz";
+// 	const char ch = 'i';
 
-	printf("%s\n", (char *)memchr(str, ch, 7));
-	printf("%s\n", (char *)ft_memchr(str, ch, 7));
-	return (0);
-}*/
+
+// 	printf("%s\n", (char *)ft_memchr(str, ch, 4));
+// 	printf("%s\n", (char *)memchr(str, ch, 4));
+// 	return (0);
+// }
