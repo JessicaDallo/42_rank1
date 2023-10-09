@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jessicadallo <jessicadallo@student.42.f    +#+  +:+       +#+        */
+/*   By: jesilva- <jesilva-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 16:48:44 by jessicadall       #+#    #+#             */
-/*   Updated: 2023/10/08 20:25:50 by jessicadall      ###   ########.fr       */
+/*   Updated: 2023/10/09 13:11:08 by jesilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,14 @@
 # define LIBFT_H
 
 # include <stdlib.h>
+# include <unistd.h>
 
 void	ft_bzero(void *s, size_t n);
+void	ft_putnbr_fd(int n, int fd);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd);
+void	*ft_calloc(size_t n, size_t size);
 void	*ft_memset(void *str, int c, size_t n);
 void	*ft_memset(void *str, int c, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);

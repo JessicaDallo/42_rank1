@@ -9,6 +9,7 @@ RMFLAGS	= -f
 
 OBJ	= ft_atoi.o \
 	ft_bzero.o \
+	ft_calloc.o \
 	ft_isalpha.o \
 	ft_isdigit.o \
 	ft_isalnum.o \
@@ -18,6 +19,10 @@ OBJ	= ft_atoi.o \
 	ft_memmove.o \
 	ft_memset.o \
 	ft_memcmp.o \
+	ft_putendl_fd.o \
+	ft_putnbr_fd.o \
+	ft_putchar_fd.o \
+	ft_putstr_fd.o \
 	ft_strchr.o \
 	ft_strlen.o \
 	ft_strncmp.o \
