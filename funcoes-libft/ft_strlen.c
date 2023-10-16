@@ -21,9 +21,7 @@ int	ft_strlen(const char *s)
 
 	i = 0;
 	while (s[i] != '\0')
-	{
 		i++;
-	}
 	return (i);
 }
 
@@ -33,3 +31,4 @@ int	ft_strlen(const char *s)
 //      printf("%zu\n", ft_strlen(x));
 //      printf("%zu\n", strlen(x));
 //      return (0);
+// }

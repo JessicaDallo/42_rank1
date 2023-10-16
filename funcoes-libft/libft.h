@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jesilva- <jesilva-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 16:48:44 by jessicadall       #+#    #+#             */
-/*   Updated: 2023/10/09 13:11:08 by jesilva-         ###   ########.fr       */
+/*   Updated: 2023/10/15 19:22:38 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,20 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	*ft_calloc(size_t n, size_t size);
 void	*ft_memset(void *str, int c, size_t n);
-void	*ft_memset(void *str, int c, size_t n);
+void	*ft_memchr(const void *str, int c, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memmove(void *str1, const void *str2, size_t n);
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 
+char	*ft_itoa(int n);
 char	*ft_strdup(const char *s);
 char	*ft_strchr(const char *str, int c);
 char	*ft_strrchr(const char *str, int c);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s1, char const *set);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
