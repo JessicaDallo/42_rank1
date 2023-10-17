@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jessicadallo <jessicadallo@student.42.f    +#+  +:+       +#+        */
+/*   By: jesilva- <jesilva-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 19:32:39 by jessicadall       #+#    #+#             */
-/*   Updated: 2023/10/08 21:36:24 by jessicadall      ###   ########.fr       */
+/*   Updated: 2023/10/17 07:38:09 by jesilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ char	*ft_strrchr(const char *str, int c)
 	res = 0;
 	while (*str)
 	{
-		if (*str == (unsigned char)c)
+		if (*str == (char)c)
 			res = (char *)str;
 		str++;
 	}
-	if (c == 0)
+	if ((char)c == 0)
 	{
 		return ((char *)str);
 	}

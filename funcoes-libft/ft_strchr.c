@@ -17,25 +17,21 @@
 #include <stdio.h>
 #include <string.h>
 
+//retorna a string apartir do char desejado
 char	*ft_strchr(const char *str, int c)
 {
-	char	*s;
-
-	s = (char *)str;
-	while (*s)
+	while (*str && *str != (unsigned char)c)
 	{
-		if (*s == (unsigned char)c)
-			return (s);
-		s++;
+		str++;
 	}
-	if (c == 0)
-		return (s);
+	if (*str == (unsigned char)c)
+		return ((char *)str);
 	return (NULL);
 }
 
 // int main () {
 // 	const char str[] = "jessica";
-// 	const char ch = 'n';
+// 	const char ch = 'i';
 // 	printf ("%s\n", ft_strchr(str, ch));
 // 	printf ("%s\n", strchr(str, ch));
 // 	return (0);

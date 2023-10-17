@@ -30,7 +30,7 @@ static int	ft_size(int n)
 		n *= -1;
 		i++;
 	}
-	if(n == 0)
+	if (n == 0)
 		i++;
 	while (n != 0)
 	{
