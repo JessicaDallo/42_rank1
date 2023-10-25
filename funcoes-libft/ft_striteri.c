@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jessicadallo <jessicadallo@student.42.f    +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 15:30:42 by jessicadall       #+#    #+#             */
-/*   Updated: 2023/10/09 22:03:21 by jessicadall      ###   ########.fr       */
+/*   Updated: 2023/10/24 16:44:26 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdio.h>	
+#include "libft.h"	
 
 // void	ft_print_result(char const *s)
 // {
@@ -35,6 +34,7 @@
 // 		*c = *c + 32;
 // }
 
+//roda uma função que desejamos em toda a string
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	unsigned int	i;

@@ -15,6 +15,7 @@
 
 #include "libft.h"
 
+//conta quantos caracteres contem na str
 int	ft_strlen(const char *s)
 {
 	int	i;

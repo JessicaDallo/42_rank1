@@ -3,17 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jessicadallo <jessicadallo@student.42.f    +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 17:29:22 by jessicadall       #+#    #+#             */
-/*   Updated: 2023/10/11 19:02:29 by jessicadall      ###   ########.fr       */
+/*   Updated: 2023/10/24 18:59:33 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
-#include <stdio.h>
 
+// int	ft_strlen(const char *s)
+// {
+// 	int	i;
+
+// 	i = 0;
+// 	while (s[i] != '\0')
+// 		i++;
+// 	return (i);
+// }
+
+//usada para juntar e contar o tamanho da string 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	slen;
@@ -39,10 +48,11 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst[dlen + i] = 0;
 	return (slen + dlen);
 }
-// int main () {
-// 	char*dst[] = "jessica";
-// 	char src[] = "jessica";
-// 	printf ("%ld\n", ft_strlcat*dst, src, 5));
-// 	printf ("%d\n", strlcat*dst, src, 7));
+// int main () 
+// {
+// 	char *dst = "jessica";
+// 	char *src = "jessica";
+// 	printf ("%d\n", ft_strlcat(dst, src, 7));
+// 	printf ("%d\n", strlcat*dst, src, 5));
 // 	return (0);
 // }

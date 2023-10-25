@@ -15,6 +15,7 @@
 
 #include "libft.h"
 
+//verifica se é um valor numérico
 int	ft_isdigit(int c)
 {
 	if (c >= 48 && c <= 57)

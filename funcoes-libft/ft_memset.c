@@ -15,6 +15,7 @@
 
 #include "libft.h"
 
+// coloca a quantidade  x de caracteres que escolhemos dentro de uma string 
 void	*ft_memset(void *str, int c, size_t n)
 {
 	size_t			i;

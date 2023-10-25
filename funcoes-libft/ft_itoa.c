@@ -13,14 +13,15 @@
 #include "libft.h"
 #include <unistd.h>
 
-static int	ft_abs(int n)
+//faz a conversão de integer para char
+int	ft_abs(int n)
 {
 	if (n < 0)
 		return (-n);
 	return (n);
 }
 
-static int	ft_size(int n)
+int	ft_size(int n)
 {
 	int	i;
 

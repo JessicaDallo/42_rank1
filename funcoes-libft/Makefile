@@ -25,6 +25,7 @@ OBJ	= ft_atoi.o \
 	ft_putnbr_fd.o \
 	ft_putchar_fd.o \
 	ft_putstr_fd.o \
+	*ft_split.o \
 	ft_strchr.o \
 	ft_strlen.o \
 	ft_strncmp.o \
@@ -41,9 +42,17 @@ OBJ	= ft_atoi.o \
 	ft_toupper.o \
 	ft_tolower.o 
 
-	
-	
-all: $(NAME) 
+OBJ_BONUS = *ft_lstnew.o \
+	ft_lstadd_front.o \
+	ft_lstsize.o \
+	ft_lstlast.o \
+	ft_lstadd_back.o \
+	ft_lstdelone.o \
+	ft_lstclear.o \
+	ft_lstiter.o \
+	ft_lstmap.o
+
+all: $(NAME)
 
 $(NAME): $(OBJ)
 	$(AR) $(ARFLAGS) $@ $(OBJ)
@@ -52,9 +61,12 @@ $(NAME): $(OBJ)
 	$(CC) $(CFLAGS) -o $@ -c $<
 
 clean:
-	$(RM) $(RMFLAGS) $(OBJ)
+	$(RM) $(RMFLAGS) $(OBJ) $(OBJ_BONUS)
 
 fclean: clean
 	$(RM) $(RMFLAGS) $(NAME)
 
-re: fclean all 
+re: fclean all
+
+bonus: $(OBJ) $(OBJ_BONUS)
+	$(AR) $(ARFLAGS) $(NAME) $(OBJ) $(OBJ_BONUS)

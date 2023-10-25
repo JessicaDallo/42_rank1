@@ -3,16 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jesilva- <jesilva-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 08:09:17 by jesilva-          #+#    #+#             */
-/*   Updated: 2023/10/09 08:10:22 by jesilva-         ###   ########.fr       */
+/*   Updated: 2023/10/24 18:50:43 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
+//a função aloca a quantidade de bytes ncessarias e faz a inicialização com a 
+//função bzero que colca o valor zero em cada byte
 void	*ft_calloc(size_t n, size_t size)
 {
 	void	*s;

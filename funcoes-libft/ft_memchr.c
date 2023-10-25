@@ -14,8 +14,8 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
+//procura o caractere passado na str e retorna a string apartir do caractere
 void	*ft_memchr(const void *str, int c, size_t n)
 {
 	unsigned char	*s;
@@ -35,9 +35,9 @@ void	*ft_memchr(const void *str, int c, size_t n)
 // int	main(void)
 // {
 // 	const char str[] = "jessica gosta de arroz";
-// 	const char ch = 'i';
+// 	const char ch = 'o';
 
-// 	printf("%s\n", (char *)ft_memchr(str, ch, 4));
-// 	printf("%s\n", (char *)memchr(str, ch, 4));
+// 	printf("%s\n", (char *)ft_memchr(str, ch, 22));
+// 	printf("%s\n", (char *)memchr(str, ch, 20));
 // 	return (0);
 // }

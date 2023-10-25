@@ -14,9 +14,25 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
+// void	*ft_memcpy(void *dest, const void *src, size_t n)
+// {
+// 	size_t	i;
+
+// 	i = 0;
+// 	if (!dest && !src)
+// 	{
+// 		return (NULL);
+// 	}
+// 	while (i < n)
+// 	{
+// 		((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
+// 		i++;
+// 	}
+// 	return (dest);
+// }
+
+//copia origem para destino
 void	*ft_memmove(void *str1, const void *str2, size_t n)
 {
 	if (!str1 && !str2)
@@ -34,11 +50,11 @@ void	*ft_memmove(void *str1, const void *str2, size_t n)
 		ft_memcpy(str1, str2, n);
 	return (str1);
 }
-/*int	main(void)
-{
-	char orig[] = "jessica abcd";
-		char dest[] = "12347878978";
-	printf("%s\n", (char *)ft_memmove(dest, orig, 12));
-	printf("%s\n", (char *)memmove(dest, orig, 12));
-	return (0);
-}*/
+// int	main(void)
+// {
+// 	char orig[] = "jessica abcd";
+// 	char dest[] = "12347878978";
+// 	printf("%s\n", (char *)ft_memmove(dest, orig, 11));
+// 	printf("%s\n", (char *)memmove(dest, orig, 11));
+// 	return (0);
+// }

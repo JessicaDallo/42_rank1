@@ -3,17 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jesilva- <jesilva-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 19:32:39 by jessicadall       #+#    #+#             */
-/*   Updated: 2023/10/17 07:38:09 by jesilva-         ###   ########.fr       */
+/*   Updated: 2023/10/24 16:45:44 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
+//procura um char, na string toda e retorna a sring 
 char	*ft_strrchr(const char *str, int c)
 {
 	char	*res;
@@ -33,8 +32,8 @@ char	*ft_strrchr(const char *str, int c)
 }
 // int main () {
 // 	char *ret;
-// 	const char str[] = "arnaldo gosta de arroz";
-// 	const char ch = 'v';
+// 	const char str[] = "jessica gosta de arroz";
+// 	const char ch = 'g';
 // 	ret = ft_strrchr(str, ch);
 // 	printf ("%s\n", ret);
 // 	ret = strrchr(str, ch);

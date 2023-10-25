@@ -15,6 +15,7 @@
 
 #include "libft.h"
 
+//verifica se é o item passado está entre a e z
 int	ft_isalpha(int c)
 {
 	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))

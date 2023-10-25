@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 23:23:50 by jessicadall       #+#    #+#             */
-/*   Updated: 2023/10/14 18:21:06 by marvin           ###   ########.fr       */
+/*   Updated: 2023/10/24 16:45:13 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 	//fazndo o maloc para uma nova string para ter o valor correto de bytes
 
 #include "libft.h"
-#include <stdio.h>
 
 // int	ft_strlen(const char *s)
 // {
@@ -95,6 +94,7 @@
 // 	return (NULL);
 // }
 
+//corta o caractere desejado do inicio e do fim sa string 
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		start;

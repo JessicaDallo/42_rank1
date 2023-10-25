@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jessicadallo <jessicadallo@student.42.f    +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 10:31:26 by jesilva-          #+#    #+#             */
-/*   Updated: 2023/10/11 12:43:08 by jessicadall      ###   ########.fr       */
+/*   Updated: 2023/10/24 16:43:48 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
+//escreve um integer de acordo com o descritor desejado 
 void	ft_putnbr_fd(int n, int fd)
 {
 	long int	nb;

@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jesilva- <jesilva-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 09:51:31 by jesilva-          #+#    #+#             */
-/*   Updated: 2023/10/09 10:09:02 by jesilva-         ###   ########.fr       */
+/*   Updated: 2023/10/24 15:53:16 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+//escreve uma string de acordo com o descritor desejado 
 void	ft_putstr_fd(char *s, int fd)
 {
 	while (*s)

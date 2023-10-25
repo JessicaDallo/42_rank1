@@ -15,6 +15,7 @@
 
 #include "libft.h"
 
+//muda para letra minuscula 
 int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')

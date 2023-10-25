@@ -15,6 +15,7 @@
 
 #include "libft.h"
 
+//percorre a str com a função do memset e coloca o valor nulo em toda str.
 void	ft_bzero(void *s, size_t n)
 {
 	ft_memset(s, '\0', n);

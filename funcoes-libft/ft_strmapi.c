@@ -6,12 +6,11 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 16:00:24 by marvin            #+#    #+#             */
-/*   Updated: 2023/10/13 16:01:13 by marvin           ###   ########.fr       */
+/*   Updated: 2023/10/24 19:01:43 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 // int	ft_strlen(const char *s)
 // {
@@ -25,6 +24,7 @@
 
 // char	test(unsigned int i, char s)
 // {
+// 	i = 49;
 // 	s = i;
 //         return (s);
 // }

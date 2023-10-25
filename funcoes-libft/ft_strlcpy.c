@@ -3,17 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jessicadallo <jessicadallo@student.42.f    +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 20:07:47 by jessicadall       #+#    #+#             */
-/*   Updated: 2023/10/08 20:08:30 by jessicadall      ###   ########.fr       */
+/*   Updated: 2023/10/24 16:44:47 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <bsd/string.h>
-#include <stdio.h>
 
+//copia da str origem para a destino 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;

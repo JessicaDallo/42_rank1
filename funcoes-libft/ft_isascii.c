@@ -15,6 +15,7 @@
 
 #include "libft.h"
 
+//verifica se o valor passado está dentro da tabela ascii
 int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)

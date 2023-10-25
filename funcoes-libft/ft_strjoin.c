@@ -6,12 +6,11 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 22:29:31 by jessicadall       #+#    #+#             */
-/*   Updated: 2023/10/13 15:55:48 by marvin           ###   ########.fr       */
+/*   Updated: 2023/10/24 16:44:32 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 // int	ft_strlen(const char *s)
 // {
@@ -23,6 +22,7 @@
 // 	return (i);
 // }
 
+//junta uma str na outra, criando uma nova variavel com o malloc
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	int		len1;

@@ -14,8 +14,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
 //retorna a string apartir do char desejado
 char	*ft_strchr(const char *str, int c)

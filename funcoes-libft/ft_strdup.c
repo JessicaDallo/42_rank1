@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jessicadallo <jessicadallo@student.42.f    +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 20:24:13 by jessicadall       #+#    #+#             */
-/*   Updated: 2023/10/08 20:47:49 by jessicadall      ###   ########.fr       */
+/*   Updated: 2023/10/24 16:44:15 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
+//copia uma string para outra, mas com alocação de memoria correta
 char	*ft_strdup(const char *s)
 {
 	char	*str;

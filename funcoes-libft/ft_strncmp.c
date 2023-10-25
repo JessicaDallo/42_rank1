@@ -15,6 +15,7 @@
 
 #include "libft.h"
 
+//compara uma sring com a aoutra em determinado numero de caracteres
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	unsigned int	i;

@@ -15,6 +15,7 @@
 
 #include "libft.h"
 
+//copia a quantidade de caracteres passados, da str origem para destino, 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t	i;
@@ -35,7 +36,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 // int	main(void)
 // {
 // 	char x[] = "jessica";
-// 	printf("%d\n", ft_memcpy(x, "oculos", 5));
-// 	printf("%d\n", memcpy(x, "oculos", 5));
+// 	printf("%s\n", (char *)ft_memcpy(x, "oculos", 5));
+// 	printf("%s\n", (char *)memcpy(x, "oculos", 5));
 // 	return (0);
 // }
