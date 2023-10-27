@@ -15,7 +15,7 @@
 
 #include "libft.h"
 
-//faz a conversão de char to integer
+// faz a conversão de char to integer
 int	ft_atoi(const char *str)
 {
 	int	i;

@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-//copia uma string para outra, mas com alocação de memoria correta
+// copia uma string para outra, mas com alocação de memoria correta
 char	*ft_strdup(const char *s)
 {
 	char	*str;

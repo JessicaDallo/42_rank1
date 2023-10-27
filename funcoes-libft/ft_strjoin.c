@@ -12,16 +12,6 @@
 
 #include "libft.h"
 
-// int	ft_strlen(const char *s)
-// {
-// 	int	i;
-
-// 	i = 0;
-// 	while (s[i] != '\0')
-// 		i++;
-// 	return (i);
-// }
-
 //junta uma str na outra, criando uma nova variavel com o malloc
 char	*ft_strjoin(char const *s1, char const *s2)
 {

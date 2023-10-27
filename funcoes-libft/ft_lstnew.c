@@ -2,9 +2,12 @@
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_lsnew.c                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
+/*                                                    +:+ +:+        
+	+:+     */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+      
+	+#+        */
+/*                                                +#+#+#+#+#+  
+	+#+           */
 /*   Created: 2023/10/19 07:49:24 by marvin            #+#    #+#             */
 /*   Updated: 2023/10/19 07:49:24 by marvin           ###   ########.fr       */
 /*                                                                            */
@@ -13,6 +16,7 @@
 #include "libft.h"
 #include <stdio.h>
 
+// cria um novo node da lista
 t_list	*ft_lstnew(void *content)
 {
 	t_list	*list1;

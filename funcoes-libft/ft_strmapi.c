@@ -12,16 +12,6 @@
 
 #include "libft.h"
 
-// int	ft_strlen(const char *s)
-// {
-// 	int	i;
-
-// 	i = 0;
-// 	while (s[i] != '\0')
-// 		i++;
-// 	return (i);
-// }
-
 // char	test(unsigned int i, char s)
 // {
 // 	i = 49;
@@ -29,6 +19,7 @@
 //         return (s);
 // }
 
+//aplica uma função a cada caracter de uma string
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*str;

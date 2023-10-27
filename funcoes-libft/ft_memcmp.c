@@ -12,8 +12,7 @@
 
 #include "libft.h"
 
-//compra duas sring e retorna um valor positivo(y vier antes de x)
-//negativo(x vier antes y) ou 0 (iguais)
+// compara os primeiros n bytes da memoria apontada por dest e src
 int	ft_memcmp(const void *dest, const void *src, size_t n)
 {
 	unsigned char	*d;

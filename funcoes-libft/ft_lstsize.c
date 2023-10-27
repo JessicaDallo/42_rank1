@@ -2,9 +2,12 @@
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_lstsize.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
+/*                                                    +:+ +:+        
+	+:+     */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+      
+	+#+        */
+/*                                                +#+#+#+#+#+  
+	+#+           */
 /*   Created: 2023/10/19 16:36:27 by marvin            #+#    #+#             */
 /*   Updated: 2023/10/19 16:36:27 by marvin           ###   ########.fr       */
 /*                                                                            */
@@ -12,7 +15,7 @@
 
 #include "libft.h"
 
-//conta os numeros de nós
+// conta o numero de nodes da lista
 int	ft_lstsize(t_list *lst)
 {
 	int	i;

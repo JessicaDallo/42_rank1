@@ -12,16 +12,6 @@
 
 #include "libft.h"
 
-// int	ft_strlen(const char *s)
-// {
-// 	int	i;
-
-// 	i = 0;
-// 	while (s[i] != '\0')
-// 		i++;
-// 	return (i);
-// }
-
 //usada para juntar e contar o tamanho da string 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {

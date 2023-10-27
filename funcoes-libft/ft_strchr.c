@@ -15,7 +15,7 @@
 
 #include "libft.h"
 
-//retorna a string apartir do char desejado
+// retorna a string apartir do char desejado
 char	*ft_strchr(const char *str, int c)
 {
 	while (*str && *str != (unsigned char)c)

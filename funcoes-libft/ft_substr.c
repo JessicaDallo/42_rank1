@@ -12,45 +12,6 @@
 
 #include "libft.h"
 
-// char	*ft_strdup(const char *s)
-// {
-// 	char	*str;
-// 	size_t	i;
-// 	i = 0;
-// 	str = (char *)malloc(ft_strlen(s) * sizeof(char) + 1);
-// 	if (str == NULL)
-// 		return (NULL);
-// 	while (s[i] != '\0')
-// 	{
-// 		str[i] = s[i];
-// 		i++;
-// 	}
-// 	str[i] = 0;
-// 	return (str);
-// }
-// int	ft_strlen(const char *s)
-// {
-// 	int	i;
-// 	i = 0;
-// 	while (s[i] != '\0')
-// 		i++;
-// 	return (i);
-// }
-// size_t	ft_strlcpy(char *dst, const char *src, size_t size)
-// {
-// 	size_t	i;
-// 	i = 0;
-// 	if (!size)
-// 		return (ft_strlen(src));
-// 	while (src[i] && i < size - 1)
-// 	{
-// 		dst[i] = src[i];
-// 		i++;
-// 	}
-// 	dst[i] = 0;
-// 	return (ft_strlen(src));
-// }
-
 // pega uma str e copia apartir de um caractere x ate o caractere y
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

@@ -46,6 +46,8 @@ char	*ft_itoa(int n)
 	int		size;
 	char	*str;
 
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
 	size = ft_size(n);
 	str = (char *) malloc(sizeof(char) * (size + 1));
 	if (!str)
@@ -64,32 +66,11 @@ char	*ft_itoa(int n)
 	return (str);
 }
 
-// void	ft_putchar_fd(char c, int fd)
-// {
-// 	write (fd, &c, 1);
-// }
-
-// void	ft_putstr_fd(char *s, int fd)
-// {
-// 	while (*s)
-// 	{
-// 		write (fd, s, 1);
-// 		s++;
-// 	}
-// }
-
 // int main()
 // {
-// 	int	i = 0;
-// 	int	j = -814;
-// 	int	min = -2147483648;
-// 	int	max = 2147483647;
-// 	ft_putstr_fd(ft_itoa(i), 1);
-// 	ft_putchar_fd('\n', 1);
-// 	ft_putstr_fd(ft_itoa(j), 1);
-// 	ft_putchar_fd('\n', 1);
-// 	ft_putstr_fd(ft_itoa(min), 1);
-// 	ft_putchar_fd('\n', 1);
-// 	ft_putstr_fd(ft_itoa(max), 1);
-// 	ft_putchar_fd('\n', 1);
+// 	int	x = 1995;
+// 	int	y = -1995;
+// 	printf("%s", ft_itoa(i));
+// 	printf("%s", ft_itoa(j));
+//	return (0);
 // }

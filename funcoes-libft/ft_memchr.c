@@ -15,7 +15,7 @@
 
 #include "libft.h"
 
-//procura o caractere passado na str e retorna a string apartir do caractere
+// procura por um caractere em uma string
 void	*ft_memchr(const void *str, int c, size_t n)
 {
 	unsigned char	*s;
