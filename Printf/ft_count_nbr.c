@@ -1,37 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_count_nbr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/28 17:29:16 by marvin            #+#    #+#             */
-/*   Updated: 2023/10/28 17:29:16 by marvin           ###   ########.fr       */
+/*   Created: 2023/11/01 21:36:06 by marvin            #+#    #+#             */
+/*   Updated: 2023/11/01 21:36:06 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printf(const char *input, ...)
+int	ft_count_nbr(long int nb)
 {
-	va_list	list_arg;
-	int		i;
-	int		j;
+	int	i;
 
-	i = 0;
-	j = 0;
-	va_start(list_arg, input);
-	while (input[j])
+	i = 1;
+	while (nb >= 10)
 	{
-		if (input[j] == '%')
-		{
-			i = i + ft_typedef(list_arg, input[j + 1]);
-			j++;
-		}
-		else
-			i = i + ft_putchar(input[j]);
-		j++;
+		i++;
+		nb = nb / 10;
 	}
-	va_end (list_arg);
 	return (i);
 }

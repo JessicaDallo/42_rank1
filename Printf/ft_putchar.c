@@ -1,37 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/28 17:29:16 by marvin            #+#    #+#             */
-/*   Updated: 2023/10/28 17:29:16 by marvin           ###   ########.fr       */
+/*   Created: 2023/10/31 14:59:28 by marvin            #+#    #+#             */
+/*   Updated: 2023/10/31 14:59:28 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printf(const char *input, ...)
+int	ft_putchar(char c)
 {
-	va_list	list_arg;
-	int		i;
-	int		j;
-
-	i = 0;
-	j = 0;
-	va_start(list_arg, input);
-	while (input[j])
-	{
-		if (input[j] == '%')
-		{
-			i = i + ft_typedef(list_arg, input[j + 1]);
-			j++;
-		}
-		else
-			i = i + ft_putchar(input[j]);
-		j++;
-	}
-	va_end (list_arg);
-	return (i);
+	write (1, &c, 1);
+	return (1);
 }

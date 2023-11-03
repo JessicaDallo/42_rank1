@@ -1,37 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_puthexa_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/28 17:29:16 by marvin            #+#    #+#             */
-/*   Updated: 2023/10/28 17:29:16 by marvin           ###   ########.fr       */
+/*   Created: 2023/10/31 16:55:04 by marvin            #+#    #+#             */
+/*   Updated: 2023/10/31 16:55:04 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printf(const char *input, ...)
+int	ft_puthexa(unsigned int nbr, char type)
 {
-	va_list	list_arg;
-	int		i;
-	int		j;
+	unsigned long	nb;
+	int				i;
 
-	i = 0;
-	j = 0;
-	va_start(list_arg, input);
-	while (input[j])
+	nb = nbr;
+	i = ft_count_nbr(nb);
+	if (nb == 0)
+		return (write (1, "0", 1));
+	if (nb > 16)
 	{
-		if (input[j] == '%')
-		{
-			i = i + ft_typedef(list_arg, input[j + 1]);
-			j++;
-		}
-		else
-			i = i + ft_putchar(input[j]);
-		j++;
+		ft_puthexa(nbr / 16, type);
+		ft_puthexa(nbr % 16, type);
 	}
-	va_end (list_arg);
+	else
+	{
+		if (nbr <= 9)
+			ft_putchar((nbr + 48));
+		else
+		{
+			if (type == 'x')
+				ft_putchar((nbr - 10 + 'a'));
+			if (type == 'X')
+				ft_putchar((nbr - 10 + 'A'));
+		}
+	}
 	return (i);
 }

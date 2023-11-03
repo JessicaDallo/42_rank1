@@ -1,37 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_putuns_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/28 17:29:16 by marvin            #+#    #+#             */
-/*   Updated: 2023/10/28 17:29:16 by marvin           ###   ########.fr       */
+/*   Created: 2023/10/31 15:57:47 by marvin            #+#    #+#             */
+/*   Updated: 2023/10/31 15:57:47 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printf(const char *input, ...)
+int	ft_putuns(long int nbr)
 {
-	va_list	list_arg;
-	int		i;
-	int		j;
+	int	i;
 
 	i = 0;
-	j = 0;
-	va_start(list_arg, input);
-	while (input[j])
+	if (nbr >= 10)
 	{
-		if (input[j] == '%')
-		{
-			i = i + ft_typedef(list_arg, input[j + 1]);
-			j++;
-		}
-		else
-			i = i + ft_putchar(input[j]);
-		j++;
+		i++;
+		ft_putuns((nbr / 10));
 	}
-	va_end (list_arg);
+	ft_putchar((nbr % 10 + '0'));
 	return (i);
 }

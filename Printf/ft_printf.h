@@ -15,8 +15,16 @@
 
 # include <unistd.h>
 # include <stdarg.h>
-# include "libft/libft.h"
+//# include "libft/libft.h"
 
-int	ft_printf(const char *, ...);
+int	ft_printf(const char *input, ...);
+int	ft_typedef(va_list list, const char type);
+int	ft_putchar(char c);
+int	ft_putint(int nbr);
+int	ft_putstr(char *s);
+int	ft_putuns(long int nbr);
+int	ft_puthexa(unsigned int nbr, char type);
+int	ft_putptr(unsigned long ptr);
+int	ft_count_nbr(long int nb);
 
 #endif

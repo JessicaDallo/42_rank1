@@ -19,9 +19,15 @@ ARFLAGS	= -rcs
 RM	= rm
 RMFLAGS = -f
 
-SOURCES = 
-
-OBJECTS = $(SOURCES:.c=.o)
+OBJ	= ft_printf.o \
+	ft_typedef.o \
+	ft_putint.o \
+	ft_putchar.o \
+	ft_putstr.o \
+	ft_putuns.o \
+	ft_puthexa.o \
+	ft_putptr.o \
+	ft_count_nbr.o
 
 all : $(NAME)
 
