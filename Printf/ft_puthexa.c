@@ -12,16 +12,22 @@
 
 #include "ft_printf.h"
 
-int	ft_puthexa(unsigned int nbr, char type)
+int	ft_count_hex(unsigned int nbr)
 {
-	unsigned long	nb;
-	int				i;
+	int	i;
 
-	nb = nbr;
-	i = ft_count_nbr(nb);
-	if (nb == 0)
-		return (write (1, "0", 1));
-	if (nb > 16)
+	i = 0;
+	while (nbr != 0)
+	{
+		i++;
+		nbr = nbr / 16;
+	}
+	return (i);
+}
+
+void	ft_printhex(unsigned int nbr, char type)
+{
+	if (nbr >= 16)
 	{
 		ft_puthexa(nbr / 16, type);
 		ft_puthexa(nbr % 16, type);
@@ -38,5 +44,16 @@ int	ft_puthexa(unsigned int nbr, char type)
 				ft_putchar((nbr - 10 + 'A'));
 		}
 	}
+}
+
+int	ft_puthexa(unsigned int nbr, char type)
+{
+	int	i;
+
+	if (nbr == 0)
+		return (write (1, "0", 1));
+	else
+		ft_printhex(nbr, type);
+	i = ft_count_hex(nbr);
 	return (i);
 }

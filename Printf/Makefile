@@ -19,15 +19,7 @@ ARFLAGS	= -rcs
 RM	= rm
 RMFLAGS = -f
 
-OBJ	= ft_printf.o \
-	ft_typedef.o \
-	ft_putint.o \
-	ft_putchar.o \
-	ft_putstr.o \
-	ft_putuns.o \
-	ft_puthexa.o \
-	ft_putptr.o \
-	ft_count_nbr.o
+OBJ	= ft_printf.o ft_typedef.o ft_putint.o ft_putchar.o ft_putstr.o ft_putuns.o ft_puthexa.o ft_putptr.o ft_count_nbr.o\
 
 all : $(NAME)
 
@@ -40,6 +32,6 @@ $(NAME): $(OBJ)
 clean:
 	$(RM) $(RMFLAGS) $(OBJ)
 fclean: clean
-	$(RM) $(RMFLAGS) $(NAME).
+	$(RM) $(RMFLAGS) $(NAME)
 
 re: fclean all

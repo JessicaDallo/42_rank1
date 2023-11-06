@@ -17,6 +17,11 @@ int	ft_count_nbr(long int nb)
 	int	i;
 
 	i = 1;
+	if (nb < 0)
+	{
+		nb = -nb;
+		i++;
+	}
 	while (nb >= 10)
 	{
 		i++;

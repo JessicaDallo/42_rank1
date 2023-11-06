@@ -12,16 +12,25 @@
 
 #include "ft_printf.h"
 
-int	ft_putptr(unsigned long ptr)
+int	ft_count_ptr(unsigned long long ptr)
 {
 	int	i;
 
-	i = ft_count_nbr(ptr);
-	ft_putstr("0x");
+	i = 0;
+	while (ptr != 0)
+	{
+		i++;
+		ptr = ptr / 16;
+	}
+	return (i);
+}
+
+int	ft_printptr(unsigned long long ptr)
+{
 	if (ptr >= 16)
 	{
-		ft_putptr(ptr / 16);
-		ft_putptr(ptr % 16);
+		ft_printptr(ptr / 16);
+		ft_printptr(ptr % 16);
 	}
 	else
 	{
@@ -30,5 +39,20 @@ int	ft_putptr(unsigned long ptr)
 		else
 			ft_putchar(ptr - 10 + 'a');
 	}
-	return (i + 2);
+	return (ft_count_ptr(ptr));
+}
+
+int	ft_putptr(unsigned long long ptr)
+{
+	int	i;
+
+	i = 0;
+	if (ptr == 0)
+	{
+		i = i + ft_putstr("(nil)");
+		return (i);
+	}
+	i = ft_putstr("0x");
+	i += ft_printptr(ptr);
+	return (i);
 }

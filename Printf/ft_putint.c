@@ -31,16 +31,3 @@ int	ft_putint(int nbr)
 	ft_putchar(nb % 10 + '0');
 	return (i);
 }
-// int main ()
-// {
-	//char * nbr = "ff";
-	//int i;
-
-	//i = 0;
-	//i = ft_putint_fd(nbr, 1);
-	//printf("\n %d isso vai ser o retorno", i);
-	//printf("\n teste \n");
-// 	printf("\n %x teste hexa \n", 0xFF );
-
-// 	return 0;
-// }
