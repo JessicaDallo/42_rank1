@@ -1,0 +1,3 @@
+//char	*ft_read(int fd, char *stash);
+//char	*ft_nextl(char *stash);
+//char	*get_line(char *stash);
