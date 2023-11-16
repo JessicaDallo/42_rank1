@@ -39,7 +39,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		len = i;
 	sub = (char *)malloc(sizeof(char) * (len + 1));
 	if (sub == 0)
-		return (0);
+		return (NULL);
 	i = 0;
 	while (i < len && s[start + i])
 	{
@@ -49,12 +49,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	sub[i] = '\0';
 	return (sub);
 }
-char	*ft_strchr(const char *stash, int c)
+char	*ft_strchr(const char *s, int c)
 {
-	while (*stash && *stash != (unsigned char)c)
-		stash++;
-	if (*stash == (unsigned char)c)
-		return ((char *)stash);
+	while (*s && *s!= (unsigned char)c)
+		s++;
+	if (*s == (unsigned char)c)
+		return ((char *)s);
 	return (NULL);
 }
 
@@ -65,7 +65,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		i;
 	char	*s3;
 
-	if ((!s1 && !s2) || (!s1 && s2) || (s1 && !s2))
+	if ((!s1 || !s2))
 		return (NULL);
 	lens1 = ft_strlen(s1);
 	lens2 = ft_strlen(s2);

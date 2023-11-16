@@ -13,36 +13,35 @@
 #include "get_next_line.h"
 //#include "get_next_line_utils.c"
 
-char	*ft_getline(char *stash)
+char	*ft_getline(char **stash)
 {
 	char	*temp;
 	char	*getline;
 	int		i;
 
 	i = 0;
-	i = 0;
-	while ((stash)[i] && (stash)[i] != '\n')
+	while ((*stash)[i] && (*stash)[i] != '\n')
 		i++;
-	if (i == ft_strlen(stash))
+	if (i == ft_strlen(*stash))
 	{
-		getline = ft_substr(stash, 0, i);
-		free(stash);
+		getline = ft_substr(*stash, 0, i);
+		ft_free(stash);
 		return (getline);
 	}
 	else
 	{
 		i++;
-		getline = ft_substr(stash, 0, i);
-		temp = ft_substr(stash, i, ft_strlen(stash) - i);
-		free(stash);
-		stash = temp;
+		getline = ft_substr(*stash, 0, i);
+		temp = ft_substr(*stash, i, ft_strlen(*stash) - i);
+		ft_free(stash);
+		*stash = temp;
 	}
 	if (!getline)
-		free(stash);
+		ft_free(stash);
 	return (getline);
 }
 
-void	ft_read(int fd, char *stash)
+void	ft_read(int fd, char **stash)
 {
 	char	*line;
 	char	*temp;
@@ -52,20 +51,20 @@ void	ft_read(int fd, char *stash)
 	if (!line)
 		return ;
 	rbyte = 1;
-	while (stash != NULL && *stash && !ft_strchr(stash, '\n') && rbyte > 0)
+	while (stash != NULL && *stash && !ft_strchr(*stash, '\n') && rbyte != 0)
 	{
 		rbyte = read(fd, line, BUFFER_SIZE);
 		if (rbyte == -1)
 		{
-			free(stash);
+			ft_free(stash);
 			break ;
 		}
 		line[rbyte] = '\0';
-		temp = ft_strjoin(stash, line);
-		free(stash);
-		stash = temp;
+		temp = ft_strjoin(*stash, line);
+		ft_free(stash);
+		*stash = temp;
 	}
-	free (line);
+	ft_free (&line);
 }
 
 char	*get_next_line(int fd)
@@ -76,15 +75,15 @@ char	*get_next_line(int fd)
 		return (NULL);
 	if (!stash)
 		stash = ft_strjoin("", "");
-	ft_read(fd, stash);
+	ft_read(fd, &stash);
 	if (stash == NULL)
 		return (NULL);
-	if  (!stash)
+	if  (!ft_strlen(stash))
 	{
-		free(stash);
+		ft_free(&stash);
 		return (NULL);
 	}
-	return (ft_getline(stash));
+	return (ft_getline(&stash));
 }
 
 // int main()
