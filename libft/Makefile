@@ -29,6 +29,7 @@ OBJ	= ft_atoi.o \
 	ft_strchr.o \
 	ft_strlen.o \
 	ft_strncmp.o \
+	ft_strcmp.o \
 	ft_strlcat.o \
 	ft_strnstr.o \
 	ft_strrchr.o \
